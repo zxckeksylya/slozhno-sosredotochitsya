@@ -1,40 +1,82 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Сложно сосредоточиться</title>
-  </head>
-  <body class="page">
-    <header class="header decorated-zone">
-      <nav class="header__theme-menu">
-        <ul class="header__theme-menu-list">
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_light"
-            >
-              День
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
-              disabled
-            >
-              Авто
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_dark"
-            >
-              Неон
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <script src="./scripts/script.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="color-scheme" content="dark light" />
+        <title>Сложно сосредоточиться</title>
+        <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="./styles/globals.css" />
+        <link rel="stylesheet" href="./styles/variables.css" />
+        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./styles/dark.css" />
+        <link rel="stylesheet" href="./styles/light.css" />
+    </head>
+    <body class="page">
+        <header class="header decorated-zone">
+            <div class="triangle triangle--right-top"></div>
+            <div class="triangle triangle--left-bottom"></div>
+            <nav class="header__theme-menu">
+                <ul class="header__theme-menu-list">
+                    <li class="header__theme-menu-item">
+                        <button class="header__theme-menu-button header__theme-menu-button_type_light">День</button>
+                    </li>
+                    <li class="header__theme-menu-item">
+                        <button
+                            class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
+                            disabled
+                        >
+                            Авто
+                        </button>
+                    </li>
+                    <li class="header__theme-menu-item">
+                        <button class="header__theme-menu-button header__theme-menu-button_type_dark">Неон</button>
+                    </li>
+                </ul>
+            </nav>
+            <h1 class="header__title">no focus</h1>
+            <p class="header__description accent-fon">
+                Что делать, когда не&nbsp;можешь делать ничего Или почему нам так сложно сконцентрироваться, особенно
+                когда очень надо
+            </p>
+        </header>
+        <main class="main">
+            <section class="why section">
+                <h2 class="section__title">Почему сосредоточиться так сложно</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3 class="card__title">Многозадачность</h3>
+                        <p class="card__text">
+                            Особенно сложно сосредоточиться, когда задач много и&nbsp;все они&nbsp;&mdash; важные.
+                            Где&nbsp;же легендарная многозадачность, когда она так нужна вам (и&nbsp;всем нанимающим
+                            менеджерам этого мира)? А&nbsp;дело в&nbsp;том, что её&nbsp;просто не&nbsp;существует.
+                            Исследователи выяснили, что мозгу тяжело концентрироваться даже на&nbsp;двух делах
+                            одновременно. А&nbsp;когда в&nbsp;поле внимания попадает несколько важных задач, организм
+                            паникует и&nbsp;выделяет кортизол и&nbsp;адреналин&nbsp;&mdash; &laquo;гормоны
+                            стресса&raquo;. Из-за этого мы&nbsp;работаем невнимательно: ошибаемся и&nbsp;быстро устаём.
+                            выяснили
+                        </p>
+                    </article>
+                    <article class="card">
+                        <h3 class="card__title">Дофамин</h3>
+                        <p class="card__text">
+                            С&nbsp;гормонами стресса всё понятно, но&nbsp;дальше&nbsp;&mdash; ещё интереснее.
+                            В&nbsp;нашей невозможности сосредоточиться замешана и&nbsp;полная противоположность
+                            стрессу&nbsp;&mdash; дофамин. Это вещество участвует в&nbsp;системе вознаграждения мозга.
+                            Причём тут&nbsp;он? Мы&nbsp;часто отвлекаемся от&nbsp;важной задачи на&nbsp;что-то более
+                            &laquo;приятное&raquo; для мозгов. Например, смотрим лайки в&nbsp;соцсетях. В&nbsp;это время
+                            и&nbsp;выделяется дофамин&nbsp;&mdash; и&nbsp;мы&nbsp;чувствуем удовольствие. Получается
+                            замкнутый круг: чем больше отвлекаешься, тем больше удовольствия получаешь.
+                        </p>
+                    </article>
+                </div>
+            </section>
+            <section class="what"></section>
+            <section class="how"></section>
+            <section class="pictures"></section>
+        </main>
+        <footer></footer>
+        <script src="./scripts/script.js"></script>
+    </body>
 </html>

@@ -1,5 +1,87 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+    /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+
+    font-family: 'IBM Plex mono', sans-serif;
+    font-weight: 400;
+    background-color: var(--fon);
+}
+
+.header {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr min-content 1fr;
+    position: relative;
+    background-image: var(--header-background-image-url);
+    background-position: center center;
+    background-size: cover;
+    padding: 10px;
+}
+
+.header__title {
+    /* margin-bottom: 55px; */
+}
+
+.triangle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+}
+
+.triangle--right-top {
+    border-top: 1px solid var(--text-button);
+    border-right: 1px solid var(--text-button);
+
+    top: 10px;
+    right: 10px;
+}
+
+.triangle--left-bottom {
+    border-bottom: 1px solid var(--text-button);
+    border-left: 1px solid var(--text-button);
+
+    left: 10px;
+    bottom: 10px;
+}
+
+.header__theme-menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.header__theme-menu-button {
+    outline: 0;
+    background: inherit;
+    border: none;
+    text-transform: lowercase;
+    padding: 0 13px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.header__theme-menu-button:hover {
+    outline: 1px solid var(--text-button);
+}
+
+.header__theme-menu-button:focus {
+    border-bottom: 1px solid var(--text-button);
+}
+
+.header__title {
+    font-weight: 700;
+    font-size: 116px;
+    line-height: 95.7px;
+    color: var(--main-title-text);
+    text-shadow: 4px 4px var(--title-text-shadow);
+}
+
+.accent-fon {
+    background-color: var(--accent);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
