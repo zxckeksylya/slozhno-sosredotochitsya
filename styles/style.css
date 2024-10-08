@@ -164,13 +164,13 @@
 }
 
 .pictures .cards {
-    gap: var(--grid-gap);
+    gap: 10px;
 }
 
 .pictures__list {
     display: flex;
     flex-direction: column;
-    gap: var(--grid-gap);
+    gap: 10px;
 }
 
 .pictures__list-item {
@@ -213,12 +213,12 @@
 
     .why {
         grid-template-columns: 1fr 2fr;
-        gap: var(--grid-gap);
+        gap: 20px;
     }
 
     .how {
         grid-template-columns: 1fr 2fr;
-        gap: var(--grid-gap);
+        gap: 20px;
     }
 
     .pictures__list {
@@ -279,6 +279,6 @@
     .what .cards {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: var(--grid-gap);
+        gap: 20px;
     }
 }

@@ -63,7 +63,7 @@
     }
 }
 
-@media screen, (min-width: 768px) {
+@media screen and (width >= 768px) {
     .page.theme_dark .decor-item {
         top: 20px;
         right: 45px;

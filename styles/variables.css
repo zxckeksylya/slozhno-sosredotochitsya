@@ -20,9 +20,3 @@
 .decor-item {
     display: none;
 }
-
-@media screen, (min-width: 768px) {
-    :root {
-        --grid-gap: 20px;
-    }
-}
