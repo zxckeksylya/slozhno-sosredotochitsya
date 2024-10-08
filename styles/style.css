@@ -201,14 +201,45 @@
     .header__description {
         width: calc(50% - 20px);
         margin-left: auto;
+        margin-right: 20px;
     }
 
     .header {
-        padding: 20px;
+        padding: 0;
+        margin-bottom: 60px;
+    }
+
+    .header__title {
+        font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    }
+
+    .header__theme-menu-list {
+        margin-right: 20px;
     }
 
     .wrapper {
         padding: 0 20px;
+    }
+
+    .main {
+        gap: 80px;
+        margin-bottom: 60px;
+    }
+
+    .what {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .what .section__title {
+        grid-column: 1/2;
+        margin: 0;
+    }
+
+    .what .cards {
+        grid-row: 2;
+        grid-column: 1/4;
     }
 
     .why {
@@ -221,9 +252,14 @@
         gap: 20px;
     }
 
+    .pictures .cards {
+        gap: 20px;
+    }
+
     .pictures__list {
         display: grid;
         grid-template-areas: 'sunset sunset ice-cream' 'tape books ice-cream' 'tape street street';
+        gap: 20px;
     }
 
     .pictures__list-item {
@@ -274,6 +310,7 @@
     .header__theme-menu-list {
         flex-direction: row;
         justify-content: center;
+        margin: 0;
     }
 
     .what .cards {
