@@ -15,10 +15,12 @@
 
 .wrapper {
     padding: 0 10px;
+    display: grid;
 }
 
 .header {
     height: 100vh;
+    min-height: 668px;
     display: grid;
     align-items: center;
     grid-template-rows: 1fr min-content 1fr;
@@ -63,7 +65,7 @@
 .header__theme-menu-button {
     outline: 0;
     background: inherit;
-    border: none;
+    border: 1px solid transparent;
     text-transform: lowercase;
     padding: 0 13px;
     cursor: pointer;
@@ -72,11 +74,15 @@
 }
 
 .header__theme-menu-button:hover {
-    outline: 1px solid var(--text-button);
+    border: 1px solid var(--text-button-light);
 }
 
 .header__theme-menu-button:focus-visible {
     border-bottom: 1px solid var(--text-button);
+}
+
+.header__theme-menu-button.header__theme-menu-button_active {
+    border: 1px solid var(--text-button);
 }
 
 .header__title {
@@ -103,17 +109,9 @@
     margin-bottom: 40px;
 }
 
-.why {
-    display: grid;
-}
-
-.how {
-    display: grid;
-}
-
 .section__title {
     font-size: 18px;
-    margin-bottom: 19px;
+    margin-bottom: 20px;
     color: var(--section-title-text);
 }
 
@@ -130,13 +128,13 @@
 
 .card__text {
     font-size: 18px;
-    line-height: 23.5px;
+    line-height: 23.4px;
 }
 
 .card__link {
     text-decoration: none;
     cursor: pointer;
-    text-shadow: 2px 4px var(--title-text-shadow);
+    text-shadow: 2px 2px var(--title-text-shadow);
 }
 
 .card__link:hover {
@@ -163,6 +161,10 @@
     gap: 10px;
 }
 
+.card__list-item-title {
+    font-weight: normal;
+}
+
 .pictures .cards {
     gap: 10px;
 }
@@ -181,6 +183,7 @@
 
 .footer {
     height: 100vh;
+    min-height: 668px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -219,17 +222,13 @@
 
     .wrapper {
         padding: 0 20px;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .main {
         gap: 80px;
         margin-bottom: 60px;
-    }
-
-    .what {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
     }
 
     .what .section__title {
@@ -241,15 +240,15 @@
         grid-row: 2;
         grid-column: 1/4;
     }
-
-    .why {
-        grid-template-columns: 1fr 2fr;
-        gap: 20px;
+    .how .card {
+        grid-column: 2/4;
+    }
+    .why .cards {
+        grid-column: 2/4;
     }
 
-    .how {
-        grid-template-columns: 1fr 2fr;
-        gap: 20px;
+    .pictures .cards {
+        grid-column: 1/4;
     }
 
     .pictures .cards {
@@ -299,6 +298,9 @@
 }
 
 @media screen and (width>= 1024px) {
+    .header {
+        grid-template-rows: 1fr 130px 1fr;
+    }
     .header__description {
         align-self: center;
     }
@@ -317,5 +319,9 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
+    }
+
+    .footer__title {
+        font-size: 156px;
     }
 }
