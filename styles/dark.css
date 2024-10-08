@@ -47,19 +47,16 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --fon: #fff1f7;
-        --text: #353430;
-        --text-button: #353430;
-        --text-button-light: #32312d66;
-        --accent: #ff8dcb;
-        --main-title-text: #ffc2e6;
-        --title-text-shadow: #ff8dcb;
-        --title-text: #353430;
-        --section-title-text: #353430;
-        --header-background-image-url: url('../images/cover-image-light.png');
-    }
-    .decor-item {
-        display: none;
+        --fon: #000028;
+        --text: #f1b2ce;
+        --text-button: #ff0070;
+        --text-button-light: #ff007066;
+        --accent: #ff0070;
+        --main-title-text: #d800ff;
+        --title-text-shadow: #ff0070;
+        --title-text: #000028;
+        --section-title-text: #ff0070;
+        --header-background-image-url: url('../images/cover-image-dark.pnk');
     }
 }
 
