@@ -6,6 +6,15 @@
     font-family: 'IBM Plex mono', sans-serif;
     font-weight: 400;
     background-color: var(--fon);
+    background-image: var(--header-background-image-url);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--text);
+}
+
+.wrapper {
+    padding: 0 10px;
 }
 
 .header {
@@ -14,31 +23,29 @@
     align-items: center;
     grid-template-rows: 1fr min-content 1fr;
     position: relative;
-    background-image: var(--header-background-image-url);
-    background-position: center center;
-    background-size: cover;
+
     padding: 10px;
+    margin-bottom: 40px;
 }
 
-.header__title {
-    /* margin-bottom: 55px; */
-}
-
-.triangle {
+.triangle::before {
+    content: '';
     position: absolute;
-    width: 25px;
-    height: 25px;
-}
 
-.triangle--right-top {
     border-top: 1px solid var(--text-button);
     border-right: 1px solid var(--text-button);
 
+    width: 25px;
+    height: 25px;
     top: 10px;
     right: 10px;
 }
 
-.triangle--left-bottom {
+.triangle::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
     border-bottom: 1px solid var(--text-button);
     border-left: 1px solid var(--text-button);
 
@@ -61,20 +68,22 @@
     padding: 0 13px;
     cursor: pointer;
     font-size: 18px;
+    color: var(--text-button);
 }
 
 .header__theme-menu-button:hover {
     outline: 1px solid var(--text-button);
 }
 
-.header__theme-menu-button:focus {
+.header__theme-menu-button:focus-visible {
     border-bottom: 1px solid var(--text-button);
 }
 
 .header__title {
-    font-weight: 700;
-    font-size: 116px;
+    font-weight: bold;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     line-height: 95.7px;
+    letter-spacing: 1px;
     color: var(--main-title-text);
     text-shadow: 4px 4px var(--title-text-shadow);
 }
@@ -83,5 +92,193 @@
     background-color: var(--accent);
     font-size: 18px;
     font-weight: 700;
+    color: var(--title-text);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    margin-bottom: 40px;
+}
+
+.why {
+    display: grid;
+}
+
+.how {
+    display: grid;
+}
+
+.section__title {
+    font-size: 18px;
+    margin-bottom: 19px;
+    color: var(--section-title-text);
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card__text {
+    font-size: 18px;
+    line-height: 23.5px;
+}
+
+.card__link {
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: 2px 4px var(--title-text-shadow);
+}
+
+.card__link:hover {
+    border-bottom: 1px solid var(--text-button);
+}
+
+.card__link:focus-visible {
+    outline: 1px solid var(--text-button);
+}
+
+.how .card__title {
+    margin-bottom: 10px;
+}
+
+.card__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card__list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pictures .cards {
+    gap: var(--grid-gap);
+}
+
+.pictures__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--grid-gap);
+}
+
+.pictures__list-item {
+    width: 100%;
+    object-fit: fill;
+    height: auto;
+}
+
+.footer {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__title {
+    font-weight: bold;
+    font-size: 116px;
+    line-height: 95.7px;
     letter-spacing: 1px;
+    color: var(--main-title-text);
+    text-shadow: 4px 4px var(--title-text-shadow);
+}
+
+@media screen, (min-width: 768px) {
+    .header__description {
+        width: calc(50% - 20px);
+        margin-left: auto;
+    }
+
+    .header {
+        padding: 20px;
+    }
+
+    .wrapper {
+        padding: 0 20px;
+    }
+
+    .why {
+        grid-template-columns: 1fr 2fr;
+        gap: var(--grid-gap);
+    }
+
+    .how {
+        grid-template-columns: 1fr 2fr;
+        gap: var(--grid-gap);
+    }
+
+    .pictures__list {
+        display: grid;
+        grid-template-areas: 'sunset sunset ice-cream' 'tape books ice-cream' 'tape street street';
+    }
+
+    .pictures__list-item {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .sunset {
+        grid-area: sunset;
+    }
+
+    .ice-cream {
+        grid-area: ice-cream;
+    }
+
+    .tape {
+        grid-area: tape;
+    }
+
+    .books {
+        grid-area: books;
+    }
+
+    .street {
+        grid-area: street;
+    }
+
+    .triangle::before {
+        top: 20px;
+        right: 20px;
+    }
+
+    .triangle::after {
+        left: 20px;
+        bottom: 20px;
+    }
+}
+
+@media screen, (min-width: 1024px) {
+    .header__description {
+        align-self: center;
+    }
+
+    .header__theme-menu {
+        align-self: start;
+    }
+
+    .header__theme-menu-list {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .what .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--grid-gap);
+    }
 }

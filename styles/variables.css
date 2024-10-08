@@ -2,3 +2,27 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+:root {
+    --fon: #fff1f7;
+    --text: #353430;
+    --text-button: #353430;
+    --text-button-light: #32312d66;
+    --accent: #ff8dcb;
+    --main-title-text: #ffc2e6;
+    --title-text-shadow: #ff8dcb;
+    --title-text: #353430;
+    --header-background-image-url: url('../images/cover-image-light.png');
+
+    --grid-gap: 10px;
+}
+
+.decor-item {
+    display: none;
+}
+
+@media screen, (min-width: 768px) {
+    :root {
+        --grid-gap: 20px;
+    }
+}

@@ -5,8 +5,67 @@
 */
 
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
+    /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+
+    --fon: #000028;
+    --text: #f1b2ce;
+    --text-button: #ff0070;
+    --text-button-light: #ff007066;
+    --accent: #ff0070;
+    --main-title-text: #d800ff;
+    --title-text-shadow: #ff0070;
+    --title-text: #000028;
+    --section-title-text: #ff0070;
+    --header-background-image-url: url('../images/cover-image-dark.pnk');
+}
+
+.page.theme_dark .decor-item {
+    font-size: 18px;
+    position: absolute;
+    display: block;
+    color: var(--accent);
+    text-transform: uppercase;
+    top: 10px;
+    right: 35px;
+}
+.page.theme_dark .decor-item::after {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    color: var(--accent);
+    top: 9px;
+    right: -15px;
+    display: inline-block;
+    background-color: var(--accent);
+    box-shadow: 0 0 4px 4px var(--title-text-shadow);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fon: #fff1f7;
+        --text: #353430;
+        --text-button: #353430;
+        --text-button-light: #32312d66;
+        --accent: #ff8dcb;
+        --main-title-text: #ffc2e6;
+        --title-text-shadow: #ff8dcb;
+        --title-text: #353430;
+        --section-title-text: #353430;
+        --header-background-image-url: url('../images/cover-image-light.png');
+    }
+    .decor-item {
+        display: none;
+    }
+}
+
+@media screen, (min-width: 768px) {
+    .page.theme_dark .decor-item {
+        top: 20px;
+        right: 45px;
+    }
 }

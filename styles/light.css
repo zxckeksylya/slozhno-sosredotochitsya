@@ -18,5 +18,10 @@
     --main-title-text: #ffc2e6;
     --title-text-shadow: #ff8dcb;
     --title-text: #353430;
+    --section-title-text: #353430;
     --header-background-image-url: url('../images/cover-image-light.png');
+}
+
+.page.theme_light .decor-item {
+    display: none;
 }
