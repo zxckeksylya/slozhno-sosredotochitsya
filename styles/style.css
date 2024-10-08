@@ -197,7 +197,7 @@
     text-shadow: 4px 4px var(--title-text-shadow);
 }
 
-@media screen, (min-width: 768px) {
+@media screen and (width >= 768px) {
     .header__description {
         width: calc(50% - 20px);
         margin-left: auto;
@@ -262,7 +262,7 @@
     }
 }
 
-@media screen, (min-width: 1024px) {
+@media screen and (width>= 1024px) {
     .header__description {
         align-self: center;
     }
