@@ -325,13 +325,10 @@
     }
 
     .what .cards {
-        grid-column: 1/4;
-    }
-
-    .what .cards {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
+        grid-column: 1/4;
     }
 
     .pictures .cards {
